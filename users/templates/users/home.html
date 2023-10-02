@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container  bg-black">
+     <div class="container py-5 h-100">
+       <div class="row d-flex justify-content-center align-items-center h-500">
+          <div class="col-md-12 col-xl-10">
+             <div class="mask-custom">
+               <div class="card-body p-4 ">
+                   <div class="row">
+                      
+                      <div class="d-flex">
+                        <img src="{{profile.photo.url}}" class="rounded-5" width=150px  style="object-fit:cover;">
+                        <div class="mx-5">
+                            <h5 class="border-0 align-left text-warning">
+                                {{ profile.name }}
+                             </h5>
+                            <h5 class="text-warning">Bio</h5>
+                            <p>{{profile.bio}}</p>
+
+                            <p><bold class="text-warning">Email</bold> {{profile.email}}</p>
+
+                        </div>
+                    </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+{% endblock content %}

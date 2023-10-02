@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container  bg-black">
+     <div class="container py-5 h-100">
+       <div class="row d-flex justify-content-center align-items-center h-500">
+          <div class="col-md-12 col-xl-10">
+             <div class="mask-custom">
+               <div class="card-body p-4 ">
+                {% for project in projects %}
+                   <div class="row">
+                      <h5 class="border-0 align-left text-warning">
+                         {{ project.name }}
+                      </h5>
+                      <p class="text-white">{{project.description | truncatewords:10 }} <a href="{% url 'project_detail' project.id %}" class="text-decoration-none text-success">Check Out Now</a></p>
+                      
+                      <hr>
+                   </div>
+                {% endfor %}
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+{% endblock content %}
